@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        {{data['sprint']|capitalize|removeDash}}
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <p>
+        Some explanation about what was carried out this sprint
+      </p>
+
+      <h2 class="govuk-heading-m">This is a flow from "{{data['sprint']|removeDash}}"</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="{{data['sprint']}}/pass-data/vehicle-registration">Pass data from page to page</a>
+        </li>
+        <li>
+          <a href="{{data['sprint']}}/pass-data/vehicle-check-answers">Link to check your answers</a>
+          </li>
+      </ul>
+
+      <p>
+     Testing link to assets
+     </p>
+     <p>
+     <img src="public/_{{data['sprint']}}/images/birds-flying.jpeg" alt="ducks flying over water" width="400px">
+     </p>
+
+     <p>
+       Sprint specific data
+       </p>
+       <p>
+         {{data.vehicles|dump}}
+       </p>
+
+    </div>
+  </div>
+
+{% endblock %}

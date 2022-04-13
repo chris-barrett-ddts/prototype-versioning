@@ -1,0 +1,78 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Prototype for sprint versioning the prototype
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+
+      <h2 class="govuk-heading-s">Instructions</h2>
+      <ol class="govuk-list govuk-list--number">
+        <li>Take a copy of the the current folder, rename it with the next sprint label in the sequence e.g. sprint-1</li>
+        <li>Add the new folder to the routes.js file</li>
+        <li>Link the new sprint from the index page</li>
+        <li>If you have sprint specific assets take a copy of the current asset folder and rename it to match the sprint label from step 1, you will need to then restart the prototype so the assetts are coppied into public</li>
+      </ol>
+
+
+
+
+      <p>
+        A link to the current sprint
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/current">Current Sprint</a>
+        </li>
+        </ul>
+
+
+
+        <p>
+          A link to the sprint 1
+        </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="/sprint-1">Sprint 1</a>
+          </li>
+          </ul>
+
+
+          <p>
+            A link to the sprint 2
+          </p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="/sprint-2">Sprint 2</a>
+            </li>
+            </ul>
+
+
+            <p>
+              A link to the sprint 3
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                <a href="/sprint-3">Sprint 3</a>
+              </li>
+              </ul>
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
